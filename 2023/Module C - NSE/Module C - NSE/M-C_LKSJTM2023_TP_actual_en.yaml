@@ -1,0 +1,437 @@
+lab:
+  description: ''
+  notes: ''
+  title: LKS2023_Modul-C
+  version: 0.2.0
+links:
+  - id: l0
+    n1: n2
+    n2: n0
+    i1: i5
+    i2: i1
+    label: iosv-1-GigabitEthernet0/4<->asav-0-GigabitEthernet0/0
+  - id: l1
+    n1: n2
+    n2: n1
+    i1: i2
+    i2: i2
+    label: iosv-1-GigabitEthernet0/1<->iosv-0-GigabitEthernet0/1
+  - id: l2
+    n1: n3
+    n2: n2
+    i1: i3
+    i2: i3
+    label: iosv-2-GigabitEthernet0/2<->iosv-1-GigabitEthernet0/2
+  - id: l3
+    n1: n2
+    n2: n4
+    i1: i4
+    i2: i4
+    label: iosv-1-GigabitEthernet0/3<->iosv-3-GigabitEthernet0/3
+  - id: l4
+    n1: n2
+    n2: n5
+    i1: i1
+    i2: i1
+    label: iosv-1-GigabitEthernet0/0<->iosv-4-GigabitEthernet0/0
+  - id: l5
+    n1: n4
+    n2: n5
+    i1: i3
+    i2: i3
+    label: iosv-3-GigabitEthernet0/2<->iosv-4-GigabitEthernet0/2
+  - id: l6
+    n1: n4
+    n2: n6
+    i1: i2
+    i2: i2
+    label: iosv-3-GigabitEthernet0/1<->iosvl2-0-GigabitEthernet0/1
+  - id: l7
+    n1: n5
+    n2: n7
+    i1: i2
+    i2: i2
+    label: iosv-4-GigabitEthernet0/1<->iosvl2-1-GigabitEthernet0/1
+  - id: l8
+    n1: n6
+    n2: n7
+    i1: i10
+    i2: i10
+    label: iosvl2-0-GigabitEthernet2/1<->iosvl2-1-GigabitEthernet2/1
+  - id: l9
+    n1: n6
+    n2: n7
+    i1: i11
+    i2: i11
+    label: iosvl2-0-GigabitEthernet2/2<->iosvl2-1-GigabitEthernet2/2
+  - id: l10
+    n1: n7
+    n2: n8
+    i1: i4
+    i2: i4
+    label: iosvl2-1-GigabitEthernet0/3<->iosvl2-2-GigabitEthernet0/3
+  - id: l11
+    n1: n6
+    n2: n8
+    i1: i3
+    i2: i3
+    label: SW1-GigabitEthernet0/2<->SW3-GigabitEthernet0/2
+nodes:
+  - boot_disk_size: null
+    configuration: |-
+      hostname inserthostname-here
+      end
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n0
+    image_definition: null
+    label: FW1
+    node_definition: asav
+    ram: null
+    tags: []
+    x: -600
+    y: -40
+    interfaces:
+      - id: i0
+        label: Management0/0
+        slot: 0
+        type: physical
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 1
+        type: physical
+  - boot_disk_size: null
+    configuration: hostname inserthostname-here
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n1
+    image_definition: null
+    label: R4
+    node_definition: iosv
+    ram: null
+    tags: []
+    x: -400
+    y: -200
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration: hostname inserthostname-here
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n2
+    image_definition: null
+    label: ISP
+    node_definition: iosv
+    ram: null
+    tags: []
+    x: -400
+    y: -40
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet0/4
+        slot: 4
+        type: physical
+  - boot_disk_size: null
+    configuration: hostname inserthostname-here
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n3
+    image_definition: null
+    label: R1
+    node_definition: iosv
+    ram: null
+    tags: []
+    x: -400
+    y: 120
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration: hostname inserthostname-here
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n4
+    image_definition: null
+    label: R3
+    node_definition: iosv
+    ram: null
+    tags: []
+    x: -240
+    y: -160
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration: hostname inserthostname-here
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n5
+    image_definition: null
+    label: R2
+    node_definition: iosv
+    ram: null
+    tags: []
+    x: -240
+    y: 80
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+  - boot_disk_size: null
+    configuration: hostname inserthostname-here
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n6
+    image_definition: null
+    label: SW1
+    node_definition: iosvl2
+    ram: null
+    tags: []
+    x: -80
+    y: -160
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet1/0
+        slot: 4
+        type: physical
+      - id: i6
+        label: GigabitEthernet1/1
+        slot: 5
+        type: physical
+      - id: i7
+        label: GigabitEthernet1/2
+        slot: 6
+        type: physical
+      - id: i8
+        label: GigabitEthernet1/3
+        slot: 7
+        type: physical
+      - id: i9
+        label: GigabitEthernet2/0
+        slot: 8
+        type: physical
+      - id: i10
+        label: GigabitEthernet2/1
+        slot: 9
+        type: physical
+      - id: i11
+        label: GigabitEthernet2/2
+        slot: 10
+        type: physical
+  - boot_disk_size: null
+    configuration: hostname inserthostname-here
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n7
+    image_definition: null
+    label: SW2
+    node_definition: iosvl2
+    ram: null
+    tags: []
+    x: -80
+    y: 80
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+      - id: i5
+        label: GigabitEthernet1/0
+        slot: 4
+        type: physical
+      - id: i6
+        label: GigabitEthernet1/1
+        slot: 5
+        type: physical
+      - id: i7
+        label: GigabitEthernet1/2
+        slot: 6
+        type: physical
+      - id: i8
+        label: GigabitEthernet1/3
+        slot: 7
+        type: physical
+      - id: i9
+        label: GigabitEthernet2/0
+        slot: 8
+        type: physical
+      - id: i10
+        label: GigabitEthernet2/1
+        slot: 9
+        type: physical
+      - id: i11
+        label: GigabitEthernet2/2
+        slot: 10
+        type: physical
+  - boot_disk_size: null
+    configuration: hostname inserthostname-here
+    cpu_limit: null
+    cpus: null
+    data_volume: null
+    hide_links: false
+    id: n8
+    image_definition: null
+    label: SW3
+    node_definition: iosvl2
+    ram: null
+    tags: []
+    x: 80
+    y: -40
+    interfaces:
+      - id: i0
+        label: Loopback0
+        type: loopback
+      - id: i1
+        label: GigabitEthernet0/0
+        slot: 0
+        type: physical
+      - id: i2
+        label: GigabitEthernet0/1
+        slot: 1
+        type: physical
+      - id: i3
+        label: GigabitEthernet0/2
+        slot: 2
+        type: physical
+      - id: i4
+        label: GigabitEthernet0/3
+        slot: 3
+        type: physical
+annotations: []
